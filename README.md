@@ -8,3 +8,6 @@ This project includes a .env file that stores a variable called API_KEY; this AP
 AWS deployment coming soon!
 
 Preview Images:
+
+Preview of Landing Page - 
+<img width="1512" alt="Landing_Page_Preview" src="https://user-images.githubusercontent.com/107005249/181815730-971d32a4-201f-45a6-b8c8-e72144c79f78.png">

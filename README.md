@@ -1,6 +1,6 @@
 # PortfolioTrakr
 
-It can be a hassle to manage and keep track of all your investment accounts, especially if they're with different brokerages. PortfolioTrakr aims to provide a solution and allow you to keep track of your entire investment portfolio all in one place by offering a clean, modern UI as well as a quick and easy way all the investment accounts you may have.
+It can be a hassle to manage and keep track of all your investment accounts, especially if they're with different brokerages. PortfolioTrakr aims to provide a solution and allow you to keep track of your entire investment portfolio all in one place by offering a clean, modern UI as well as a quick and easy way to monitor all the investment accounts you may have.
 
 #
 A project built using Python, Flask, HTML, Jinja2, Bootstrap, MySQL, RegEx, Bcrypt, OOP and Finnhub Stock API.

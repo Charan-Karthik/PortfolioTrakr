@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioTrakr - Add Stock</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <h1 class="mb-0 text-white">PortfolioTrakr</h1>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle ml-5" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    User Account Actions
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="/portfoliotrakr/edit-user-account">Edit User Account</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger" href="/portfoliotrakr">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-danger mt-2 w-75 mx-auto">
+                {% for message in messages %}
+                    <p class="text-center">{{message}}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+    <form class="mx-auto d-block w-50 mt-5 mb-5" action="/portfoliotrakr/account/{{one_account.id}}/add-stock/submit" method="POST">
+        <h1 class="mt-4 mb-3 text-center">Add Stock Info to "{{one_account.name}}"</h1>
+
+        <div class="mb-3">
+            <label for="ticker" class="form-label">Ticker Symbol</label>
+            <input name="ticker" type="text" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="num_shares" class="form-label">Number of Shares</label>
+            <input name="num_shares" type="number" step="any" min="0" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="avg_price" class="form-label">Average Price Per Share*</label>
+            <input name="avg_price" type="number" step="0.01" min="0" class="form-control" required>
+        </div>
+
+        <div class="mb-3 text-center">
+            <input type="submit" class="btn btn-success btn-lg" value="Add Stock">
+        </div>
+
+        <div class="mx-auto d-block">
+            <p>*If your brokerage doesn't directly provide the average price per share, don't worry! The calculation is very straightfoward and easy to do :)
+                <br>
+                Simply take the total purchase cost for a given stock and divide that number by the total number of shares for that stock.
+            </p>
+        </div>
+
+        <a class="btn btn-primary" href="/portfoliotrakr/account/{{one_account.id}}">Return to Account Page</a>
+    </form>
+</body>
+</html>

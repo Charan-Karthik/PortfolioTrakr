@@ -8,6 +8,7 @@ flask = "*"
 pymysql = "*"
 flask-bcrypt = "*"
 finnhub-python = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

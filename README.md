@@ -6,7 +6,7 @@ It can be a hassle to manage and keep track of all your investment accounts, esp
 
 A project built using Python, Flask, HTML, Jinja2, Bootstrap, MySQL, RegEx, Bcrypt, OOP and Finnhub Stock API.
 
-Project Requirements (to pipenv install in Terminal): flask, python-dotenv, PyMySQL flask, flask-bcrypt
+Project Requirements (to pipenv install in Terminal): flask, python-dotenv, PyMySQL, flask-bcrypt
 
 ---
 

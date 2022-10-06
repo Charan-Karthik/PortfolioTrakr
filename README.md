@@ -12,4 +12,5 @@ Project Requirements (to pipenv install in Terminal): flask, python-dotenv, PyMy
 
 This project includes a .env file that stores a variable called API_KEY; this API key is for the Finnhub Stock API. If you wish to download/clone this repository and run the program on your own localhost, you can get a free API Key from finnhub.io (upon registering for an account). Please save the .env file in the main project folder (the same folder that contains server.py).
 
-Demo video and AWS deployment coming soon!
+### Demo Video
+<a href="https://www.youtube.com/watch?v=V5liytCK0qU">Link to YouTube</a>

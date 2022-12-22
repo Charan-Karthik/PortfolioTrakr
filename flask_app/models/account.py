@@ -2,6 +2,7 @@ from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models.user import User
 from flask_app.models.stock import Stock
 
+# Once a User has a PortfolioTrakr account, they can add individual investment accounts. This class is for the individual investment accounts
 class Account:
     def __init__(self, data):
         self.id = data["id"]
@@ -10,6 +11,7 @@ class Account:
         self.updated_at = data["updated_at"]
         self.user_id = data["user_id"]
 
+        # This information will be assigned after API calls have been made.
         self.account_value = None
         self.account_pl = None
     

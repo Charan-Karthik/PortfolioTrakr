@@ -2,6 +2,7 @@ from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash
 import re
 
+# This class is for people making an account on the PortfolioTrakr website.
 class User:
     def __init__(self, data):
         self.id = data["id"]
@@ -26,8 +27,10 @@ class User:
         results = connectToMySQL("portfolio_tracker").query_db(query, data)
         if len(results) < 1:
             return False
+        
         return cls(results[0])
     
+    # Get a specific user
     @classmethod
     def get_one_by_id(cls, data):
         query = "SELECT * FROM users WHERE id=%(id)s"

@@ -9,25 +9,29 @@ from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 from flask_app.controllers import accounts
 
-
+# Default base URL, should redirect to landing page
 @app.route('/')
 def initial_page():
     if "user_id" in session:
         del session["user_id"]
     return redirect('/portfoliotrakr')
 
+# Landing page.
 @app.route('/portfoliotrakr')
 def landing_page():
+    # To prevent bugs from a logged in user visiting this page, the logged in user is removed from session
     if "user_id" in session:
         del session["user_id"]
     return render_template("landing_page.html")
 
 @app.route('/portfoliotrakr/login')
 def login_page():
+    # To prevent bugs from a logged in user visiting this page, the logged in user is removed from session
     if "user_id" in session:
         del session["user_id"]
     return render_template("login.html")
 
+# Post method, shouldn't be directly accessible from the front end
 @app.route('/portfolio/sign-in', methods=['POST'])
 def sign_in():
     data = {

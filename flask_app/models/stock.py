@@ -9,6 +9,7 @@ API_KEY = os.getenv("API_KEY")
 import finnhub
 finnhub_client = finnhub.Client(api_key=API_KEY)
 
+# Model for adding a ticker to a specified investment account for a specific user's profile
 class Stock:
     def __init__(self, data):
         self.id = data["id"]
@@ -19,6 +20,7 @@ class Stock:
         self.updated_at = data["updated_at"]
         self.account_id = data["account_id"]
 
+        # These are for storing the information coming from the API
         self.current_price = None
         self.total_purchase_val = None
         self.total_current_val = None

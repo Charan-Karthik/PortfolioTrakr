@@ -76,14 +76,14 @@
                         </tr>
                     {% endfor %}
                     <tr class="text-center">
-                        <td><b>TOTALS:</b></td>
-                        <td><b>{{ total_value_formatted }}</b></td>
+                        <td><strong>TOTALS:</strong></td>
+                        <td><strong>{{ total_value_formatted }}</strong></td>
                         {% if total_pl > 0 %}
-                            <td class="text-success"><b>{{ total_pl_formatted }}</b></td>
+                            <td class="text-success"><strong>{{ total_pl_formatted }}</strong></td>
                         {% elif total_pl == 0 %}
-                            <td class="text-danger"><b>{{ total_pl_formatted }}</b></td>
+                            <td class="text-danger"><strong>{{ total_pl_formatted }}</strong></td>
                         {% else %}
-                            <td class="text-danger"><b>{{ total_pl_formatted }}</b></td>
+                            <td class="text-danger"><strong>{{ total_pl_formatted }}</strong></td>
                         {% endif %}
                     </tr>
                 </tbody>

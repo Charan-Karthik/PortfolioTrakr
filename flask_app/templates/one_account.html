@@ -86,15 +86,15 @@
                 {% endfor %}
                     
                     <tr>
-                        <td class="text-center" colspan="4"><b>TOTALS:</b></td>
-                        <td class="text-center"><b>{{sum_purchase_val}}</b></td>
-                        <td class="text-center"><b>{{sum_current_val}}</b></td>
+                        <td class="text-center" colspan="4"><strong>TOTALS:</strong></td>
+                        <td class="text-center"><strong>{{sum_purchase_val}}</strong></td>
+                        <td class="text-center"><strong>{{sum_current_val}}</strong></td>
                         {% if sum_pl > 0 %}
-                            <td class="text-center text-success"><b>{{ formatted_sum_pl }}</b></td>
+                            <td class="text-center text-success"><strong>{{ formatted_sum_pl }}</strong></td>
                         {% elif sum_pl == 0 %}
-                            <td class="text-center text-danger"><b>{{ formatted_sum_pl }}</b></td>
+                            <td class="text-center text-danger"><strong>{{ formatted_sum_pl }}</strong></td>
                         {% else %}
-                            <td class="text-center text-danger"><b>{{ formatted_sum_pl }}</b></td>
+                            <td class="text-center text-danger"><strong>{{ formatted_sum_pl }}</strong></td>
                         {% endif %}
                     </tr>
             </tbody>
